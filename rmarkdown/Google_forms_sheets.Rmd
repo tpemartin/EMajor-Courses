@@ -1,0 +1,78 @@
+---
+title: "Google Forms/Sheets"
+author: "林茂廷"
+date: "3/21/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval=F)
+library(dplyr)
+library(stringr)
+```
+
+## 套件
+
+```{r}
+library(googlesheets)
+```
+
+## 創造forms and sheets
+
+  * 創造Google forms
+  
+  * 創造Google表單
+
+## 認證
+
+```{r, eval=FALSE}
+gs_auth(new_user = TRUE)
+```
+
+  * 執行後會產生通行你google sheet的權杖。
+  
+  * 權杖一陣子會失效，如突然無法用就再執行一次上面的程式
+  
+一個Google sheet檔案裡可包含很多worksheet。
+
+範例Google sheet url:   https://docs.google.com/spreadsheets/d/1SyLqzvouz6im1RdGjiLLJapf7IOBUIwNy-wStMjQpLI/edit#gid=1013338512
+
+其中的Google Sheet ID為 
+```
+1SyLqzvouz6im1RdGjiLLJapf7IOBUIwNy-wStMjQpLI
+```
+
+## gs_key
+
+透過sheet ID我們可以取得某個gs（google sheet縮寫）的key，用它來進行各種與此表單的線上/線下互動。
+
+```{r}
+"1SyLqzvouz6im1RdGjiLLJapf7IOBUIwNy-wStMjQpLI" %>%
+  gs_key() -> mygsKey
+```
+
+## gs_read: 讀取worksheet
+
+```{r}
+mygsKey %>%
+  gs_read(ws="Form Responses 1") -> myWorksheet
+```
+
+## gs_edit
+
+```{r}
+myWorksheet %>%
+  group_by(姓名) %>%
+  summarise(
+    便當偏好=str_c(便當選擇, collapse = "; ")
+  ) -> lunchPreference
+```
+
+
+```{r}
+lunchPreference %>%
+  gs_edit_cells(mygsKey,ws="便當偏好",
+                input=.,
+                anchor="A1") -> mygsKey
+```
+
