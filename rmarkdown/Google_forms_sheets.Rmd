@@ -13,6 +13,8 @@ library(stringr)
 
 ## 套件
 
+參考資料： <https://cran.r-project.org/web/packages/googlesheets/vignettes/basic-usage.html>
+
 ```{r}
 library(googlesheets)
 ```
