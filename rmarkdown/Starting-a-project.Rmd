@@ -1,0 +1,32 @@
+---
+title: "Starting a collaborating project"
+author: "林茂廷"
+date: "3/26/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+source("/Users/martin/Desktop/GitHub/My-functions/DataScienceTeaching/R/misc.R")
+screenshot_location(paste0(getwd(),"/rmarkdown/img"))
+```
+
+## Repo setup 
+
+  * Leader sets up a repo.
+  
+  * Leader add collaborators.
+  
+## Create a gitter chatroom
+
+  * Leader sets up a **public** chatroom.
+  
+  * Leader invites members via an invitation link.
+  
+  * Leader integrates repo to the chatroom.
+  
+## Github issus and milestone
+
+  * Milestones: significant stages of a project. 
+  
+  * Issues: things/problems that need to be resolved or delegated through the project.
