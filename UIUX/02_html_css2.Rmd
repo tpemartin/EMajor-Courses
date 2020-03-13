@@ -6,6 +6,8 @@
 
   * 下載[RmdTemplateHtml.Rmd](https://drive.google.com/open?id=1r4AHjPcirfeaNvjRoIopIhUmiy4nivvf)與[plainHTML.Rmd](https://drive.google.com/open?id=1v_MMgQguYvo8Gk-2nbgdCdsQuQvTyA-Y)（必需有加入Google classroom此連結才會有效）
 
+<iframe src="https://player.vimeo.com/video/397441578" width="640" height="480" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
 ## 學習主題
 
   * 建立一個Project. 
@@ -132,6 +134,12 @@ htmltools::includeHTML("外部html檔案")
 ## 課後練習
 
 ### A
+
+下載資料匣[02_A_exercise](https://drive.google.com/open?id=1zNLDh8XO2zwwD_Vt3_eziATn9ZwpF0hR)完成page1.Rmd及subpage/page2.Rmd使兩者knit完的html畫面如下，使用table及img相關html tags.
+
+```{r, echo=FALSE}
+knitr::include_graphics("img/02_A.png")
+```
 
 
 ### B
