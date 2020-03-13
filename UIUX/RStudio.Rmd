@@ -1,0 +1,27 @@
+# RStudio
+
+## Materials
+
+  * 網頁程式設計基礎: https://www.openedu.tw/course.jsp?id=765
+  
+## Goals
+
+  * Understand a simple web projct
+    * a **self-contained** .html
+    * a structure of **file system** where some .html's internally depend on other files within the file system.
+
+  * Understand the role of RStudio in web design.
+  
+    * Rmd: a bridge to final .html product.
+    * Text: with different file extensions to supply web supporting documents, such as .html, .css, .js.
+    
+  * Use certain functions from htmltools **to intertwine verious web supporting documents** inside an Rmd.
+
+## Assignment
+
+  1. Execute the following code to download and unzip the following file system:
+  
+  Change the file system structure to ... and edit the .html file to make .html work correctly in your browser.
+  
+  2. Intertwine the following documents inside an Rmd without changing the file system structure.
+
