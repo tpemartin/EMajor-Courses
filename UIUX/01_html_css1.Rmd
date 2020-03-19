@@ -1,0 +1,26 @@
+# HTML/CSS 1 {#htmlcss1}
+
+## 教材
+
+  * 網頁程式設計基礎: https://www.openedu.tw/course.jsp?id=765
+
+<iframe src="https://player.vimeo.com/video/395867813" width="640" height="480" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+## 學習主題
+
+  * 如何在RStudio裡打html文件。
+  
+  * 了解html tags
+  
+  
+## 課後練習
+
+### A
+
+請寫一個html檔利用不同tags產生本章節的文字呈現效果。
+
+（Hints: https://www.w3schools.com/html/default.asp 裡的headings, list兩小節）
+
+### B
+
+RStudio裡的R Markdown文件可以按Knit （File > Knit document）產生對應檔案但副檔名為.html的文件。請開啟一份新的R Markdown檔（File > New File > R Markdown）, 並knit它。請各自寫下head、body裡的children tags （無需列到grand children）.

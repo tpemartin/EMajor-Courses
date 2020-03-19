@@ -1,0 +1,6 @@
+book_filename: "UIUX"
+delete_merged_file: true
+language:
+  ui:
+    chapter_name: "Chapter "
+#rmd_files: ["index.Rmd", "01_html_css1.Rmd"]

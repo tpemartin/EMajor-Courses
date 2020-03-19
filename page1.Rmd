@@ -1,0 +1,30 @@
+---
+title: "Plain HTML"
+output: 
+  html_document:
+    theme: null
+    highlight: null
+    mathjax: null
+    self_contained: false
+---
+
+
+<table>
+
+  <tr>
+    <th>頭像</th>
+    <th>使用者名稱</th>
+    
+  </tr>
+  
+  <tr>
+    <th><img src = "img/tpemartin.png"/></th>
+    <th>tpemartin</th>
+  </tr>
+  
+  <tr>
+    <th><img src = "img/emilyluckey.png"/></th>
+    <th>emileylucky</th>
+  </tr>
+
+</table>

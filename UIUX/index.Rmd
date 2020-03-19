@@ -1,0 +1,53 @@
+--- 
+title: "UI-UX"
+subtitle: "國立臺北大學前膽自主學習實驗計畫"
+author: "林茂廷老師"
+date: "108學年度第2學期"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+description: "學習並瞭解網頁設計與網頁服務的UI-UX，最終結合社會科學與科技技能，運用所學發展跨領域的服務項目。"
+---
+
+# 課程說明{-}
+
+## 各章內容構架{-}
+
+
+每一章架構如下： 
+
+  * 學習主題列點
+  
+  * 各主題內容
+  
+  * 課後練習
+  
+## Vimeo影片{-}
+
+  * 每章針對學習主題內容錄製20-30分鐘講解影片。（因為影片不長，每章內容要求精簡，但課後練習可以有兩題，一題簡單，一題難要進一步自學找答案。）
+  
+  * 使用自己的電腦或系上多媒體室。
+  
+  * 錄製技術採傳承製：前一章在錄時，下一章的人在旁協助或觀看。
+  
+  * 上傳Vimeo
+  
+## 課後練習{-}
+
+  * 每週五只針對課後練習討論，成員（含USR人員）在上課前要自己看完影片及做好課後練習
+  
+  * 練習結果請放在自己的Github練習repo裡（練習repo由<https://github.com/tpemartin/uiux-inclass-practice> fork回去）
+  
+  * 每章練習請在練習repo裡開一個該章檔案匣，並將你的練習檔案放裡面。
+  
+  * 繳交練習結果請在Google classroom作業區回填你的練習檔案匣網址。
+  
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```

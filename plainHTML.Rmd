@@ -1,0 +1,17 @@
+---
+title: "Plain HTML"
+output: 
+  html_document:
+    theme: null
+    highlight: null
+    mathjax: null
+    self_contained: false
+    includes:
+      in_header: "externalHead.html"
+      after_body: "externalAfterBody.html"
+---
+
+```{r,echo=FALSE}
+htmltools::includeHTML("content.html")
+```
+
