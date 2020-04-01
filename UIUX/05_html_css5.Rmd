@@ -9,104 +9,84 @@
   
 ## 學習主題
 
-  * 如何使用 Position 定義物件位置 
+  * 如何使用 Containers 定義物件位置 
   
-  * 如何使用 Flex-box 排版
+  * 如何使用 Grid 排版
   
-  * 運用 Position 跟 Flex-box 完成初步網頁模板
+  * 運用 Containers 跟 Grid 完成初步網頁模板
   
 ## 主題內容
 
-### Position
-
-  * 四項屬性
-    
-  1. Static
+`<head>`中引入 bootstrap 網址
     
 ```
-.class{
-  position: static;
-}
+<head>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+</head>
+```
+
+### Containers
+    
+
+  * `container` 
 
 ```
-  2. Relative 
+<div class="container">
+  <h1>Responsive Containers</h1>
+</div>
 
 ```
-.class{
-  position: relative;
-  left: 10px;
-}
+  * 其他 `container` 用法
 
 ```
-  3. Absolute 
-
-```
-.class{
-  position: absolute;
-  top:100px;
-  right: 20px;
-}
-
-```
-  4. Fixed
-
-```
-.class{
-  position: fixed;
-  top:0;
-  right:0;
-}
+<div class="container-sm border">.container-sm</div>
+<div class="container-md mt-3 border">.container-md</div>
+<div class="container-lg mt-3 border">.container-lg</div>
+<div class="container-xl mt-3 border">.container-xl</div>
 
 ```
 
-### Flex-box 
+### Grid
 
-  * Step 1 建立一個包含全部元素的盒子`<div>`(container)
+  * Step 1 建立一個`<div>`(row)
   
 ```
-  <div class="container">
+  <div class="row">
   
   </div>
 ```
-  * Step 2 在最外層的盒子中，加入需要的元素(item)
+  * Step 2 在`<div class = "row">`輸入文字
   
 ```
-  <div class="container">
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-    <div>5</div>
+  <div class="col-sm-6 col-md-9">
+  
+    <!-- Content here -->
+
   </div>
 ```
 
-  * Step 3 變更屬性，使各項元素可以有不同的位置變化
+```
+  <div class="col-sm-6 col-md-3">
+  
+    <!-- Content here -->
 
+  </div>
 ```
-  .container{
-    display: flex;
-    background-color: lightBlue;
-  }
-  .container > div {
-    background-color: #f1f1f1;
-    margin: 10px;
-    padding: 20px;
-    font-size: 30px;
-  }
-```
-  * Step 4 完成簡易模板
 
 
 ## 課後練習
 
 ### A
 
-利用 Position 的方式，在 practice2 中加入第三章作業所完成的圖片，練習讓該圖片可以在不同位置，達到網頁中廣告的效果。
+使用 Containers 和 Grid 做出一個如 sample 的網頁範例。
+
+sample：https://drive.google.com/drive/folders/1HRfPjaoa3zvz7_6oAibNXXZA_ctM_jL9?usp=sharing
 
 
 ### B
 
-利用 Flex-box 完成一個簡單的模板，並試著讓這個頁面可以適用在不同大小的介面中。
-
-Hints: 查詢 W3schools CSS `Flexbox` 與 CSS `@media Rule`
+<br>將完成的 HTML 引入 Rmd 檔，完成一個網頁形式。</br>
+hint：電子書 2.3 節
 
