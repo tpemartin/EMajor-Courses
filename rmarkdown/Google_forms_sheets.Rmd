@@ -73,8 +73,38 @@ myWorksheet %>%
 
 ```{r}
 lunchPreference %>%
-  gs_edit_cells(mygsKey,ws="便當偏好",
+  gs_edit_cells(mygsKey,
+                ws="tpemartin",
                 input=.,
                 anchor="A1") -> mygsKey
+```
+
+# Example
+
+```{r}
+"1SyLqzvouz6im1RdGjiLLJapf7IOBUIwNy-wStMjQpLI" %>%
+  gs_key() -> mygsKey
+```
+
+```{r}
+mygsKey %>%
+  gs_read(ws="Sheet11") -> exampleWs
+```
+
+```{r}
+exampleWs %>%
+  mutate(
+    到期日=借閱日期+14
+  ) -> newExampleWs
+```
+
+```{r}
+newExampleWs %>%
+  gs_edit_cells(
+    mygsKey,
+    ws="Sheet11",
+    input=.,
+    anchor="A1"
+  ) -> mygsKey
 ```
 
