@@ -1,0 +1,112 @@
+# HTML/CSS 5 {#htmlcss5}
+
+## 教材
+
+  * 網頁程式設計基礎：https://courses.openedu.tw/courses/course-v1:plus+TK+19014/pdfbook/0/
+
+  * 課程影片：
+  
+  
+## 學習主題
+
+  * 如何使用 Position 定義物件位置 
+  
+  * 如何使用 Flex-box 排版
+  
+  * 運用 Position 跟 Flex-box 完成初步網頁模板
+  
+## 主題內容
+
+### Position
+
+  * 四項屬性
+    
+  1. Static
+    
+```
+.class{
+  position: static;
+}
+
+```
+  2. Relative 
+
+```
+.class{
+  position: relative;
+  left: 10px;
+}
+
+```
+  3. Absolute 
+
+```
+.class{
+  position: absolute;
+  top:100px;
+  right: 20px;
+}
+
+```
+  4. Fixed
+
+```
+.class{
+  position: fixed;
+  top:0;
+  right:0;
+}
+
+```
+
+### Flex-box 
+
+  * Step 1 建立一個包含全部元素的盒子`<div>`(container)
+  
+```
+  <div class="container">
+  
+  </div>
+```
+  * Step 2 在最外層的盒子中，加入需要的元素(item)
+  
+```
+  <div class="container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
+```
+
+  * Step 3 變更屬性，使各項元素可以有不同的位置變化
+
+```
+  .container{
+    display: flex;
+    background-color: lightBlue;
+  }
+  .container > div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+  }
+```
+  * Step 4 完成簡易模板
+
+
+## 課後練習
+
+### A
+
+利用 Position 的方式，在 practice2 中加入第三章作業所完成的圖片，練習讓該圖片可以在不同位置，達到網頁中廣告的效果。
+
+
+### B
+
+利用 Flex-box 完成一個簡單的模板，並試著讓這個頁面可以適用在不同大小的介面中。
+
+Hints: 查詢 W3schools CSS `Flexbox` 與 CSS `@media Rule`
+
