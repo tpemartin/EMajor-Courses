@@ -1,0 +1,239 @@
+# Javascript 1 {#js1}
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,eval=F)
+```
+
+```{r echo=FALSE, eval=T}
+source('~/Desktop/GitHub/My-functions/DataScienceTeaching/R/rmarkdown_tools.R')
+library(klippy)
+klippy()
+```
+
+## 教材
+
+  * 網頁程式設計基礎：https://courses.openedu.tw/courses/course-v1:plus+TK+19014/pdfbook/1/
+  
+  * 練習網址： https://tpemartin.github.io/uiux-inclass-practice/
+  
+  * 課程影片：https://vimeo.com/ntpuecon/review/407169952/bff7c4c776
+
+<iframe src="https://player.vimeo.com/video/407169952" width="400" height="300" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+<iframe src="https://player.vimeo.com/video/407904769" width="640" height="480" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  
+## 學習主題
+
+<!--  * V8 package in R -->
+  
+  * 資料型態
+  
+  * 變數宣告與變數值的指定 
+  
+  * 全域變數（global variable）與局域變數（local variable）
+  
+  * var, let, const三種變數宣告方式
+  
+## 主題內容
+
+<!--
+### V8
+
+```{r}
+if(!require("V8")){
+  install.packages("V8")
+}
+library("V8")
+```
+
+```{js js1}
+x=2;
+```
+-->
+
+### Data Types
+
+  * https://www.w3schools.com/js/js_datatypes.asp
+  
+    * number, string, boolean, etc.
+  
+    * object: https://www.w3schools.com/js/js_objects.asp
+    
+    * array: https://www.w3schools.com/js/js_arrays.asp
+
+```{js}
+16 //number
+"Johnson" //string
+true //boolean
+[16,"Johnson",true] //array
+{age:16, name:"Johnson", vaccinated: true} //object
+```
+
+### Declaration/Assign
+
+Declaration(宣告)：  
+  
+  * var  
+  * let  
+  * const  
+  
+```{js}
+var a; 
+let b; 
+const c; 
+```
+
+Assignment(指定值)：  
+```{js}
+a="Jenny";
+b="watson";
+c="harry";
+```
+
+除了const, var/let的declaration與assignment可以分開，但declaration要先。
+```{js}
+var x=1; //declaration+assignment
+let y=2; // declaration+assignment
+
+//先declaration, 後assignment 
+var x; //declaration
+let y; //declaration
+x=1; // assign later
+y=2; // assign later
+
+//const不能分開兩者，要同時
+const z=1; //MUST declaration+assignment
+```
+
+
+### Global vs local scope
+
+  * https://www.w3schools.com/js/js_scope.asp
+
+  * 只要在`{...}`內就會形成一個local scope。
+  
+  * 函數定義所用的`{...}`也是一個local scope，通常也稱作function scope。
+
+下面有幾個local scopes?  
+```{js}
+var a=3;
+
+function test(){
+  let x=4;
+  return a+x;
+}
+
+let z=a*test();
+{
+  let w={name: "小明"};
+}
+
+```
+
+#### global and local variables
+
+變數是否為global或local scope是以它宣告的位置來看。
+
+  * global variables: 只要宣告出來，script的任何一處都可以拿來用。
+  
+  * local variables: 宣告位置所屬`{... }`scope內的任一處（含此`{...}`scope內再下一層所含之`{...}`scope。）都可拿來用，但它的外層則無法使用。  
+  
+```
+/* global scope*/
+
+  { /* local scope 1*/
+    
+    
+    
+    { /* local scope 2*/
+      
+      
+    }
+  
+  }
+
+
+```
+
+#### var, let, const
+
+  * var: 用來宣告global variable。  
+  
+  * let/const: 用來宣告local variable。  
+  
+<div class="alert alert-info">
+var也可用來宣告local variable（主要是在function定義下的`{...}` local scope用），但那是在let與const還沒被創出來前，新一代規則希望大家嚴格區分使用時機。
+</div>
+
+
+<div class="alert alert-danger">
+Do NOT create global variables unless you intend to.
+</div>
+
+以下何者為global variables? 何者為local variables? 
+```{js}
+var a="小明";
+var b;
+{
+  let c="小花";
+  let d;
+  {
+    b="小新";
+    d="阿龍";
+    const e=1;
+  }
+}
+```
+
+
+### const
+
+https://www.w3schools.com/js/js_const.asp
+
+  * 宣告（declaration）和指定值（assignment）要同時做。
+
+  * Primitive types: number, string, boolean. 事後不可改變值  
+
+```{js}
+const name="小明"
+name="大華" //會出現error
+```
+
+  * Const：指得是constant **reference** to a **value**. 
+  
+    * Array和Object可以改變內容，但不能reassign。
+    
+    * Primitive type的物件要改變內容只能reassign，所以不能改變內容。
+
+```{r, eval=T, echo=F, results="asis"}
+img_centering(src="img/assignment1.svg", width="40%")
+```
+  
+```{r, eval=T, echo=F, results="asis"}
+img_centering(src="img/assignment2.svg", width="40%")
+```
+
+
+## 課後練習
+
+### A
+在RStudio執行以下程式下載js_practice.Rmd
+```{r}
+download.file("https://www.dropbox.com/s/42ky3svddlojbgp/js_practice.Rmd?dl=1")
+```
+knit文件成為html檔。
+  
+  1. 在browser打開html檔，進入chrome inspect，試著看看js在文件中是合在一起還是分成三段。
+  
+  2. 試著在chrome inspect裡找到第二段的js有成功執行的證俱。
+  
+  3. 試著在chrome inspect找到第三段的js有造成Error的警示。
+
+### B
+在RStudio執行以下程式下載number-game-errors.html：
+```{r}
+download.file("https://github.com/mdn/learning-area/raw/master/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html",destfile = "number-game-errors.html")
+```
+使用Chrome可開啟瀏覽此頁面。
+  
+  * 請使用[2.1教材](https://bookdown.org/tpemartin/uiux/htmlcss2.html#%E6%95%99%E6%9D%90-1)裡的plainHTML.Rmd來改寫成可knit出上述網頁的number-game-errors.Rmd

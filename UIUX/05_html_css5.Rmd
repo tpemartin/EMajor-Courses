@@ -1,10 +1,14 @@
 # HTML/CSS 5 {#htmlcss5}
 
+講解成員：國立臺北大學經濟學系 鄭喬翊 
+
 ## 教材
 
   * 網頁程式設計基礎：https://courses.openedu.tw/courses/course-v1:plus+TK+19014/pdfbook/0/
 
   * 課程影片：
+  
+<iframe src="https://player.vimeo.com/video/403660798" width="640" height="480" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
   
   
 ## 學習主題

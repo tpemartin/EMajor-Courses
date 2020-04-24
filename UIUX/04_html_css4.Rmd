@@ -1,10 +1,14 @@
 # HTML/CSS 4 {#htmlcss4}
 
+講解成員：國立臺北大學經濟學系 曾雨晴 
+
 ## 教材
 
   * 網頁程式設計基礎：https://courses.openedu.tw/courses/course-v1:plus+TK+19014/pdfbook/0/
 
   * 課程影片：
+  
+  <iframe src="https://player.vimeo.com/video/401567647" width="640" height="480" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
   * 下載：https://drive.google.com/drive/folders/1T5E9fqyLYuW0LXv2xF22C4sQhhQCETHH?usp=sharing
   

@@ -1,10 +1,12 @@
 # HTML/CSS 3 {#htmlcss3}
 
+講解成員：國立臺北大學經濟學系 邱詩涵 
+
 ## 教材
 
   * 網頁程式設計基礎: https://www.openedu.tw/course.jsp?id=765
 
-  *課程影片：https://drive.google.com/file/d/1sGtv6CzIssJc0O_pitArMK-W907WMfRq/view?usp=sharing
+<iframe src="https://player.vimeo.com/video/399378421" width="640" height="344" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
 ## 學習主題
 
