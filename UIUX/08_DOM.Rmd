@@ -1,0 +1,82 @@
+# DOM {#dom}
+
+講解成員：國立臺北大學經濟學系 邱奕勳 
+
+## 教材
+
+  * 網頁程式設計基礎: https://www.openedu.tw/course.jsp?id=765
+  * 練習： https://econhackathon.ntpu.edu.tw/intro.html
+  * Youtube: https://www.youtube.com/watch?v=H63dVFDuJDM
+  * https://developer.mozilla.org/en-US/docs/Web/API/Element
+
+## 學習主題
+
+  * 什麼是DOM
+  
+  * 為什麼需要DOM
+  
+  * 如何運用DOM
+  
+## 主題內容
+
+### DOM 介紹
+  * DOM = Document + Object + Model
+
+  * Document: HTML file
+  
+  * Object: The HTML element
+  
+  * Model: How to lay out the structure (the tree structure)
+  
+  * https://hyp.is/ud305IwbEeqjeE_VvByOag/www.w3schools.com/js/js_htmldom.asp
+
+### The tree structure
+
+<img src="https://www.w3schools.com/js/pic_htmltree.gif"></img>
+
+  * node(節點): 文件節點、標籤元件節點、屬性節點、文字節點
+
+### 為什麼需要DOM
+
+  * 讓JS讀懂HTML file，並對HTML file操作
+
+### 如何運用DOM
+
+  1. 找到目標節點並儲存
+
+```
+var mytitle = document.getElementsByClassName("title")
+```
+  * https://via.hypothes.is/https://www.w3schools.com/js/js_htmldom_elements.asp
+  
+  
+  2. 對目標節點修改/新增/刪除...
+
+```
+mytitle.innerText = "新的title"
+```
+
+  * https://www.w3schools.com/jsref/dom_obj_all.asp
+
+  * 注意：`getElementsByClassName()`是 Method; `.innerText`是 Property
+  (https://www.w3schools.com/js/js_htmldom_methods.asp#annotations:LJ1PNIwcEeqP4ZcOVXbUpw)
+
+
+
+## 課後練習
+
+### A
+ * 更改練習網頁-競賽說明-競賽方式的圖片為<br>
+ "https://scontent.ftpe7-1.fna.fbcdn.net/v/t1.0-9/18222713_781569005326407_1734193853434441892_n.jpg?_nc_cat=100&_nc_sid=09cbfe&_nc_ohc=1HF8V6namKgAX8L72EY&_nc_ht=scontent.ftpe7-1.fna&oh=dd5ece6b66fb3fe5829fecdc4d2a6166&oe=5ED275E2"
+ 
+ * hint: src為property
+
+
+### B
+ * addeventlistener: 在滑鼠滑到臉書粉專標籤上面時，顯示"要來按讚嗎？"
+ 
+ * hint: event為"mouseover" (https://www.w3schools.com/jsref/dom_obj_event.asp)
+ 
+ 
+
+
